@@ -10,14 +10,10 @@ Vue.use(Vuex)
 Vue.use(VueAxios, axios)
 Vue.use(BootstrapVue)
 
-export default new Vuex.Store({
-  state: {
-
-  },
-  mutations: {
-
-  },
-  actions: {
+const store = new Vuex.Store({
+  modules: {
 
   }
 })
+
+export default store
