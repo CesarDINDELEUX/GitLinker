@@ -8,11 +8,14 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
-
+import userService from '@/services/user.service.js'
 export default {
   name: 'home',
   components: {
     HelloWorld
+  },
+  mounted() {
+    userService.getCurrentUserInformations()
   }
 }
 </script>
