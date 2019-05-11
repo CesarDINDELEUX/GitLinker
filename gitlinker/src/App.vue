@@ -1,13 +1,34 @@
 <template>
   <div id="app">
     <div id="nav">
+      <button v-on:click="updateOrga">Add 1</button>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About222</router-link>
     </div>
     <router-view/>
   </div>
 </template>
+<script>
+import { mapState, mapGetters, mapActions } from 'vuex'
 
+export default {
+  name: 'app',
+  components: {
+  },
+  data: () => ({
+  }),
+  computed: {
+  },
+  methods: {
+    ...mapActions('OrganizationStore', [
+      'pushOrganizations'
+    ]),
+    updateOrga: async function () {
+      await this.pushOrganizations()
+    }
+  }
+}
+</script>
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
