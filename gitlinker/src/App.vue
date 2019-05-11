@@ -1,30 +1,34 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <button v-on:click="updateOrga">Add 1</button>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About222</router-link>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12"> 
+            <Top/>
+        </div>
     </div>
-    <router-view/>
+    <div class="row">
+      
+    </div>
+  <button v-on:click="updateRepos">Add 1</button>
   </div>
 </template>
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex'
-
+import Top from './components/top.vue'
 export default {
   name: 'app',
   components: {
+    Top
   },
   data: () => ({
   }),
   computed: {
   },
   methods: {
-    ...mapActions('OrganizationStore', [
-      'pushOrganizations'
+    ...mapActions('ReposStore', [
+      'pushRepos'
     ]),
-    updateOrga: async function () {
-      await this.pushOrganizations()
+    updateRepos: async function () {
+      await this.pushRepos()
     }
   }
 }

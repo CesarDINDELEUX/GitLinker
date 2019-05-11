@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import OrganizationStore from './store/modules/organization.module'
+import ReposStore from './store/modules/repos.module'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   modules: {
-    OrganizationStore
+    ReposStore
   },
   state: {
 
