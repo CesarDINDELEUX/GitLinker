@@ -13,6 +13,7 @@
     "bootstrap-vue": "^2.0.0-rc.19",
     "jquery": "^1.9.1",
     "vue": "^2.6.10",
+    "vue-google-charts": "^0.3.2",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
